@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavHeader from './components/molecule/NavHeader';
-import Home from './components/aulas/aula6/Home';
-import About from './components/aulas/aula6/About';
+import NavHeader from './components/molecule/navHeader.jsx';
+import Home from './components/aulas/aula6/Home.jsx';
+import About from './components/aulas/aula6/About.jsx';
 
 const App = () => {
     return (
