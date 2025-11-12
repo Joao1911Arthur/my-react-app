@@ -1,14 +1,21 @@
 import './App.css'
-import ListaTarefas from './components/listaTarefas.jsx'
-import VerificarSenha from './components/senha.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavHeader from './components/molecule/NavHeader';
+import Home from './components/aulas/aula6/Home';
+import About from './components/aulas/aula6/About';
 
-function App() {
+const App = () => {
     return (
-        <>
-            <VerificarSenha />
-            <ListaTarefas />
-        </>
-    )
-}
+        <BrowserRouter>
+            <NavHeader />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/about/:id" element={<About />} />
 
+            </Routes>
+        </BrowserRouter>
+    );
+}
 export default App;

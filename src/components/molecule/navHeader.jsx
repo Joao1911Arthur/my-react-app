@@ -1,0 +1,26 @@
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
+
+function NavHeader() {
+    const navigate = useNavigate();
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="fixed" color='success'>
+                <Toolbar>
+                    <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+                        Loja legal de anabolizantes
+                    </Typography>
+
+                    <Box>
+                        <Button color="inherit" onClick={() => navigate("/home")}>Home</Button>
+                        <Button color="inherit" onClick={() => navigate("/about")}>Sobre</Button>
+                        <Button color="inherit" onClick={() => navigate("/contact")}>Contato</Button>
+                    </Box>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
+}
+
+export default NavHeader;
