@@ -29,7 +29,6 @@ export default function MediaCard({ id, img, nome, data, cargo }) {
             </CardContent>
             <CardActions>
                 <Button size="small" onClick={() => navigate(`/produto/:${id}`)}>Share</Button>
-                <Button size="small">Learn More</Button>
             </CardActions>
         </Card>
     );
