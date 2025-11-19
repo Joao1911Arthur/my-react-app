@@ -23,6 +23,7 @@ function Produto() {
 
     return (
         <div>
+            <img src={produto.foto} alt="" />
             <h1>Nome: {produto.nome}</h1>
             <p>Data de Nascimento: {produto.dtNascimento}</p>
             <p>Cargo: {produto.cargo}</p>

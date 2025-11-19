@@ -4,28 +4,32 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
 
-export default function ImgMediaCard() {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        width="10"
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqwFs2ve2AngzuA5EpqcxGC3BoHdxTbR_CrABrBFhpvbeqmmCrTkdrPNEVfhYPlBzyIo&usqp=CAU"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-      <Button variant="contained" style={{display: "flex", alignSelf: 'center'}}>Neh</Button>
-      </CardActions>
-    </Card>
-  );
+
+export default function MediaCard({ id, img, nome, data, cargo }) {
+    const navigate = useNavigate();
+
+    return (
+        <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+                sx={{ height: 140 }}
+                image={img}
+                title="green iguana"
+            />
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                    {nome}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    <>Data de Nascimento:{data}</>
+                    <br />
+                    <>Cargo: {cargo}</>
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small" onClick={() => navigate(`/produto/:${id}`)}>Comprar</Button>
+            </CardActions>
+        </Card>
+    );
 }

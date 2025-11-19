@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MediaCard from '../aula9/Card.jsx';
+import MediaCard from '../atom/card.jsx';
 
 
-const Home2 = () => {
+const Home = () => {
   const [data, setData] = useState(null);
     useEffect(() => {
     axios.get('https://node-vercel-app-rho.vercel.app/api/funcionarios')
@@ -29,4 +29,4 @@ const Home2 = () => {
   )
 }
 
-export default Home2;
+export default Home;
