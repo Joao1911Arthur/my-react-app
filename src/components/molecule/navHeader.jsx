@@ -1,15 +1,21 @@
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, CardMedia } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
 function NavHeader() {
     const navigate = useNavigate();
+
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed" color='success'>
+        <Box>
+            <AppBar color='default' position="fixed">
                 <Toolbar>
-                    <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                        Loja legal de anabolizantes
+                    <Typography component="div" sx={{ flexGrow: 1 }}>
+                        <CardMedia
+                            sx={{ height: 100 }}
+                            image='/src/assets/LogoNaturalSupplements.png'
+                            title="green iguana"
+                            style={{width:"130px"}}
+                        />
                     </Typography>
 
                     <Box>
