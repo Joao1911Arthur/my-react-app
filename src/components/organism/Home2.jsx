@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MediaCard from '../atom/Card.jsx';
+import MediaCard from '../atom/card.jsx';
 import BigCard from '../molecule/bigCard.jsx';
 
 
